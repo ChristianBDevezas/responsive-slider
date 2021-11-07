@@ -59,7 +59,6 @@ section.slider {
     left: 0;
     opacity: 0;
 }
-
 .show-item.slider__item {
     animation: show-img .7s forwards;
 }
@@ -76,8 +75,15 @@ section.slider {
 
 .slider__description {
     position: absolute;
-    bottom: 5px;
-    left: 7px;    
+    bottom: 7px;
+    transform: translateX(3.5%);
+}
+.moving-text.slider__description {
+    animation: move-text 1s; 
+}
+@keyframes move-text {
+    0% {transform: translateX(-40%);}
+    100% {transform: translateX(3.5%);}
 }
 
 .styling {

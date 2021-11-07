@@ -10,16 +10,19 @@ let index = 0;
 
 totalNumbers.forEach((item) => item.innerHTML = totalNumbers.length);
 
-currentNumbers[0].innerHTML = index + 1;
+currentNumbers[0].innerHTML = `${index + 1} / `;
 
 sliderImages.forEach((image, idx) => {
     const description = image.getAttribute("alt");
     sliderDescriptions[idx].innerHTML = description;
 });
 
+sliderDescriptions[0].classList.add("moving-text");
+setTimeout(() => sliderDescriptions[0].classList.remove("moving-text"), 1000);
+
 function currentNumber() {
     currentNumbers.forEach((item) => {
-        item.innerHTML = index + 1;
+        item.innerHTML = `${index + 1} / `;
     });
 }
 
@@ -29,10 +32,14 @@ function hideImages() {
     });
 }
 
-function showImages(idx) {    
+function showImages(idx) {
     sliderItems[idx].classList.add("show-item");
-        sliderContainer.classList.add("show-effect");
-        setTimeout(() => sliderContainer.classList.remove("show-effect"), 700);
+
+    sliderContainer.classList.add("show-effect");
+    setTimeout(() => sliderContainer.classList.remove("show-effect"), 700);
+
+    sliderDescriptions[idx].classList.add("moving-text");
+    setTimeout(() => sliderDescriptions[idx].classList.remove("moving-text"), 1000);
 }
 
 let intervalImages = setInterval(changeImages, 3750);
