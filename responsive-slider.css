@@ -33,6 +33,7 @@ section.slider {
 .slider::before {
     left: 0%;    
 }
+
 .slider::after { 
     right: 0%;
 }
@@ -59,6 +60,7 @@ section.slider {
     left: 0;
     opacity: 0;
 }
+
 .show-item.slider__item {
     animation: show-img .7s forwards;
 }
@@ -78,6 +80,7 @@ section.slider {
     bottom: 7px;
     transform: translateX(3.5%);
 }
+
 .moving-text.slider__description {
     animation: move-text 1s; 
 }
@@ -102,14 +105,19 @@ section.slider {
     object-fit: cover;
 }
 
-.controls {
-    position: relative;
-    height: 100%;
+.slider__controls {
+    position: absolute;
+    top: 48.5%;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
-.controls i {
+.slider__controls button {
+    border: none;
+}
+
+.slider__controls i {
     position: absolute;
-    top: 50%;
     z-index: 2;
     font-size: calc(18px + 2vw);
     cursor: pointer;
@@ -119,12 +127,14 @@ section.slider {
     border: 2px solid white;
     transition: all .5s;
 }
-.controls i:hover {
+.slider__controls i:hover {
     opacity: 1;
 }
-.left-control i {
-    left: 8px;    
+
+.slider__controls .left-control i {
+    left: calc(8px);    
 }
-.right-control i {
-    right: 8px;
+
+.slider__controls .right-control i {
+    right: calc(8px);
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Slider</title>
+    <title>Responsive Slider</title>
     <link rel="stylesheet" href="responsive-slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"/>
 </head>
@@ -13,69 +13,71 @@
 
     <section class="slider">
         <!-- Slider Images -->
-        <div class="slider__item show-item">
-            <div class="slider__number styling">
-                <span class="current"></span>
-                <span class="total"></span>
-            </div>
-            <div class="slider__description styling"></div>
-            <img src="img/deutsche-bahn-ice.jpg" alt="Deutsche Bahn - Germany">
-        </div>
-        
-        <div class="slider__item">
-            <div class="slider__number styling">
-                <span class="current"></span>
-                <span class="total"></span>
-            </div>
-            <div class="slider__description styling"></div>
-            <img src="img/eurostar.jpg" alt="Eurostar - United Kingdom">
-        </div>
+        <div class="slider__images">
+            <article class="slider__item show-item">
+                <div class="slider__number styling">
+                    <span class="current"></span>
+                    <span class="total"></span>
+                </div>
+                <div class="slider__description styling"></div>
+                <img src="img/deutsche-bahn-ice.jpg" alt="Deutsche Bahn - Germany">
+            </article>
+            
+            <article class="slider__item">
+                <div class="slider__number styling">
+                    <span class="current"></span>
+                    <span class="total"></span>
+                </div>
+                <div class="slider__description styling"></div>
+                <img src="img/eurostar.jpg" alt="Eurostar - United Kingdom">
+            </article>
 
-        <div class="slider__item">
-            <div class="slider__number styling">
-                <span class="current"></span>
-                <span class="total"></span>
-            </div>
-            <div class="slider__description styling"></div>
-            <img src="img/frecciarossa.jpg" alt="Frecciarossa - Italy">
-        </div>
+            <article class="slider__item">
+                <div class="slider__number styling">
+                    <span class="current"></span>
+                    <span class="total"></span>
+                </div>
+                <div class="slider__description styling"></div>
+                <img src="img/frecciarossa.jpg" alt="Frecciarossa - Italy">
+            </article>
 
-        <div class="slider__item">
-            <div class="slider__number styling">
-                <span class="current"></span>
-                <span class="total"></span>
-            </div>
-            <div class="slider__description styling"></div>
-            <img src="img/korail-ktx.jpg" alt="Korail KTX - South Korea">
-        </div>
+            <article class="slider__item">
+                <div class="slider__number styling">
+                    <span class="current"></span>
+                    <span class="total"></span>
+                </div>
+                <div class="slider__description styling"></div>
+                <img src="img/korail-ktx.jpg" alt="Korail KTX - South Korea">
+            </article>
 
-        <div class="slider__item">
-            <div class="slider__number styling">
-                <span class="current"></span>
-                <span class="total"></span>
-            </div>
-            <div class="slider__description styling"></div>
-            <img src="img/maglev.jpg" alt="Maglev - Japan">
-        </div>
+            <article class="slider__item">
+                <div class="slider__number styling">
+                    <span class="current"></span>
+                    <span class="total"></span>
+                </div>
+                <div class="slider__description styling"></div>
+                <img src="img/maglev.jpg" alt="Maglev - Japan">
+            </article>
 
-        <div class="slider__item">
-            <div class="slider__number styling">
-                <span class="current"></span>
-                <span class="total"></span>
-            </div>
-            <div class="slider__description styling"></div>
-            <img src="img/thalys.jpg" alt="Thalys - Belgium">
+            <article class="slider__item">
+                <div class="slider__number styling">
+                    <span class="current"></span>
+                    <span class="total"></span>
+                </div>
+                <div class="slider__description styling"></div>
+                <img src="img/thalys.jpg" alt="Thalys - Belgium">
+            </article>
         </div>
 
         <!-- Slider Contols -->
-        <div class="controls">
-            <div class="left-control">
+        <div class="slider__controls">
+            <button class="left-control">
                 <i class="fas fa-arrow-circle-left"></i>
-            </div>
+            </button>
     
-            <div class="right-control">
+            <button class="right-control">
                 <i class="fas fa-arrow-circle-right"></i>
-            </div>
+            </button>
         </div>
     </section>
 
