@@ -32,6 +32,11 @@ function hideImages() {
     });
 }
 
+function checkImages() {
+    if(index < 0) index = sliderItems.length - 1;
+    if(index > sliderItems.length - 1) index = 0;
+}
+
 function showImages(idx) {
     sliderItems[idx].classList.add("show-item");
 
@@ -46,11 +51,8 @@ let intervalImages = setInterval(changeImages, 3750);
 
 function changeImages() {
     hideImages();
-
     index++;
-    if(index > sliderItems.length - 1) {
-        index = 0;
-    }
+    checkImages();
     showImages(index);
     currentNumber();
 }
@@ -60,9 +62,8 @@ leftArrow.addEventListener("click", () => {
     hideImages();
 
     index--;
-    if(index < 0) {
-        index = sliderItems.length - 1;
-    }
+    checkImages();
+    
     showImages(index);
     currentNumber();
 
@@ -74,9 +75,8 @@ rightArrow.addEventListener("click", () => {
     hideImages();
 
     index++;
-    if(index > sliderItems.length - 1) {
-        index = 0;
-    }
+    checkImages();
+    
     showImages(index);
     currentNumber();
 
