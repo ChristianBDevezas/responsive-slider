@@ -4,8 +4,7 @@ const currentNumbers = document.querySelectorAll(".current");
 const sliderImages = document.querySelectorAll(".slider__item img");
 const sliderDescriptions = document.querySelectorAll(".slider__description");
 const totalNumbers = document.querySelectorAll(".total");
-const leftArrow = document.querySelector(".left-control");
-const rightArrow = document.querySelector(".right-control");
+const arrowButtons = document.querySelectorAll(".slider__controls button");
 let index = 0;
 
 totalNumbers.forEach((item) => item.innerHTML = totalNumbers.length);
@@ -57,28 +56,22 @@ function changeImages() {
     currentNumber();
 }
 
-leftArrow.addEventListener("click", () => {
-    clearInterval(intervalImages);
-    hideImages();
+arrowButtons.forEach((button) => {
+    button.addEventListener(("click"), () => {
+        clearInterval(intervalImages);
+        hideImages();
 
-    index--;
-    checkImages();
-    
-    showImages(index);
-    currentNumber();
+        if(button.classList.contains("left-control")) {
+            index--;
+        }
+        if(button.classList.contains("right-control")) {
+            index++;
+        }
 
-    intervalImages = setInterval(changeImages, 3750);
-});
+        checkImages();        
+        showImages(index);
+        currentNumber();
 
-rightArrow.addEventListener("click", () => {
-    clearInterval(intervalImages);
-    hideImages();
-
-    index++;
-    checkImages();
-    
-    showImages(index);
-    currentNumber();
-
-    intervalImages = setInterval(changeImages, 3750);
+        intervalImages = setInterval(changeImages, 3750);
+    });
 });
